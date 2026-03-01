@@ -64,7 +64,7 @@ export function Card({ question, onDismiss }) {
                     {/* BACK OF CARD (Tarot Style) */}
                     <div
                         className="absolute inset-0 flex flex-col items-center justify-center bg-brand-text text-brand-bg rounded-2xl w-full h-full overflow-hidden"
-                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(0deg) translateZ(1px)' }}
                     >
                         <div className="border border-brand-bg/15 w-[92%] h-[94%] rounded-xl flex flex-col items-center justify-center p-6 relative">
                             {/* Mystical geometric elements */}
@@ -87,7 +87,7 @@ export function Card({ question, onDismiss }) {
                     {/* FRONT OF CARD (Question) */}
                     <div
                         className="absolute inset-0 flex flex-col items-center justify-center p-8 sm:p-12 text-center bg-white rounded-2xl w-full h-full border border-brand-text/5"
-                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+                        style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden', transform: 'rotateY(180deg) translateZ(1px)' }}
                     >
                         <motion.div
                             animate={{ y: [-2, 2, -2] }}
