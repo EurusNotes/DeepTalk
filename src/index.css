@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600&display=swap');
+
+@theme {
+  --color-brand-bg: #F9F8F6;
+  --color-brand-dark: #121212;
+  --color-brand-text: #2C2A29;
+  --font-serif: "Noto Serif SC", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+@layer base {
+
+  html,
+  body {
+    @apply bg-brand-bg text-brand-text font-serif antialiased;
+    height: 100dvh;
+    width: 100vw;
+    overflow: hidden;
+    /* Prevent scrolling for the card app feel */
+    overscroll-behavior-y: none;
+    /* Good for iOS Safari swipe gestures */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove tap gray overlay on iOS */
+  }
+
+  #root {
+    @apply w-full flex flex-col items-center;
+    height: 100dvh;
+  }
+}
